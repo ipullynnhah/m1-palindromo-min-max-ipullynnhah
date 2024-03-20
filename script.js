@@ -16,5 +16,13 @@ function isPalindrome(str) {
 }
 
 function arrayMaxMin(arr) {
-  /* Seu código aqui */
+  const maxMin = [arr[0], arr[0]];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < maxMin[0]) {
+      maxMin[0] = arr[i];
+    } else if (arr[i] > maxMin[1]) {
+      maxMin[1] = arr[i];
+    }
+  }
+  return maxMin;
 }
